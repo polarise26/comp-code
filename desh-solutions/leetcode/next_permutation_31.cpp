@@ -28,6 +28,9 @@ int main() {
         } 
     }
 
+    if (index == -1) {
+        reverse(A.begin(), A.end());
+    }
     // cout << index;
 
     // 2. Find the next greatest index to replace the index with
