@@ -31,7 +31,7 @@ int main() {
     // cout << index;
 
     // 2. Find the next greatest index to replace the index with
-    for (i = n - 1; i > index; --i) {
+    for (int i = n - 1; i > index; --i) {
         if (A[i] > A[index - 1]) {
             int temp;
 
@@ -43,7 +43,14 @@ int main() {
         }    
     } 
 
-    
+    // 3. Sort the rest of the array in ascending order
+    reverse(A.begin() + index, A.end());
+
+    for (int i = 0; i < n; ++i) { 
+        cout << A[i] << " ";
+    }
+
+    cout << endl;
 }
 
 void itDoesItForYou(vector<int> A) {
