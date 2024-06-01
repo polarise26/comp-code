@@ -28,7 +28,22 @@ int main() {
         } 
     }
 
-    cout << index;
+    // cout << index;
+
+    // 2. Find the next greatest index to replace the index with
+    for (i = n - 1; i > index; --i) {
+        if (A[i] > A[index - 1]) {
+            int temp;
+
+            temp = A[i];
+            A[i] = A[index - 1];
+            A[index - 1] = temp;  
+
+            break;
+        }    
+    } 
+
+    
 }
 
 void itDoesItForYou(vector<int> A) {
