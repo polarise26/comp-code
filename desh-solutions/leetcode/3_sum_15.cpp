@@ -6,6 +6,32 @@ vector<vector<int>> Solution(vector<int> input, int n) {
 
     sort(input.begin(), input.end());
 
+    for (int i = 0; i < n - 1; ++i) {
+        if (i != 0 && input[i] == input[i - 1]) continue;
+
+        int j = i + 1;
+        int k = n - 1;
+
+        while (j < k) {
+            int sum = input[i] + input[j] + input[k];
+            if (sum == 0) {
+                vector<int> temp = { input[i], input[j], input[k] };
+
+                ans.push_back(temp);
+
+                j++;
+                k--;
+
+                while (j < k && input[j] == input[j - 1]) j++;
+                while (j < k && input[k] == input[k + 1]) k--; 
+            } else if (sum > 0) {
+                --k;
+            } else {
+                j++;
+            }
+        }
+    }
+
     return ans;
 }
 
