@@ -1,6 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 
+vector<vector<int>> Solution(vector<int> input, int n) {
+    vector<vector<int>> ans;
+
+    sort(input.begin(), input.end());
+
+    return ans;
+}
 
 int main() {
     vector<int> input = { -1, 0, 1, 2, -1, -4 }; 
