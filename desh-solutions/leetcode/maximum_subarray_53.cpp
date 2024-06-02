@@ -20,7 +20,7 @@ int solution(vector<int> input) {
     return max;
 }
 
-int main() [
+int main() {
     vector<int> input = { -2, 1, -3, 4, -1, 2, 1, -5, 4 };
     int n = input.size();
 
@@ -29,4 +29,4 @@ int main() [
     cout << ans;
 
     return 0;
-]
+}
