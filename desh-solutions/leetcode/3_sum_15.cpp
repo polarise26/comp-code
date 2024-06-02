@@ -6,15 +6,14 @@ int main() {
     vector<int> input = { -1, 0, 1, 2, -1, -4 }; 
     int n = input.size();
 
-    sort(input.begin(), input.end());
+    vector<vector<int>> ans = Solution(input, n);
 
-    unordered_map<int, int> m;
-    for (int i = 0; i < n; ++i) {
-        m[input[i]]++;
-    }
+    for (auto i = 0; i < ans.size(); ++i) {
+        for (int j = 0; j < ans[0].size(); ++j) {
+            cout << ans[i][j] << " ";
+        }
 
-    for (auto i = m.begin(); i != m.end(); ++i) {
-        cout << i -> first << " " << i -> second << endl;
+        cout << endl;
     }
 
     return 0;
