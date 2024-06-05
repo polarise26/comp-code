@@ -37,7 +37,7 @@ vector<vector<int>> twoPtrSol(vector<int> &num, int n)
 
     for (int left = 0; left < n; ++left)
     {
-        if (left != 0 && num[left] == num[left - 1])
+        if (left > 0 && num[left] == num[left - 1])
             continue;
         int mid = left + 1;
         int right = n - 1;
