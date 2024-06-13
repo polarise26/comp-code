@@ -66,7 +66,7 @@ vector<vector<int>> twoPtrSol(vector<int> &num, int n)
 
 int main()
 {
-    vector<int> arr = {-1, 0, 1, 2, -1, -4};
+    vector<int> arr = {-1, 0, 1, 2, -1, -4, 8, 7, 12, 4, -8, -4};
     int n = arr.size();
     vector<vector<int>> ans = twoPtrSol(arr, n);
     for (auto it : ans)
